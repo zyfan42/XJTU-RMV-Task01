@@ -69,14 +69,14 @@
 以上，就已经能安装一个**够用**的WSL 2，参考[WSL 文档](https://learn.microsoft.com/zh-cn/windows/wsl/)还可以尝试运行GUI应用或者使用CUDA。
 
 以下是我使用WSL的一些截图：
-![系统内核](screenfetch.png)
+![系统内核](./assets/screenfetch.png)
 以上是系统内核。
 
-![Nautilus文件管理](nautilus.png)
+![Nautilus文件管理](./assets/nautilus.png)
 这是Nautilus，一个GUI文件管理器。
 
-![Code](vscode.png)
+![Code](./assets/vscode.png)
 还可以很轻松地连接到VS Code。
 
-![CUDA](cuda.png)
+![CUDA](./assets/cuda.png)
 检查Nvidia GPU驱动。
