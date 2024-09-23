@@ -1,9 +1,9 @@
 # Task01
-*鉴于本来就较为频繁地使用WSL，故选择了最快完成这项任务的方式。*
+*由于频繁使用WSL，选择了最快的安装方式。*
 
-参考这份MS官方的[最佳安装实践](https://learn.microsoft.com/zh-cn/windows/wsl/setup/environment)已经可以足够优雅地安装好一个Linux子系统，其中的[TroubleShooting](https://learn.microsoft.com/zh-cn/windows/wsl/troubleshooting)也能解决大部分常见问题和小部分疑难杂症。
+参考微软官方的[最佳安装实践](https://learn.microsoft.com/zh-cn/windows/wsl/setup/environment)可以优雅地安装Linux子系统，其中的[Troubleshooting](https://learn.microsoft.com/zh-cn/windows/wsl/troubleshooting)也能解决大部分常见问题。
 
-现将WSL安装过程总结为极简版：
+现将WSL安装过程总结如下：
 
 ### WSL 安装指南
 
@@ -14,11 +14,11 @@
     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
     dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
     ```
-3. 如果使用的是 WSL 2，还需启用 **Hyper-V** 功能：
+3. 如果使用 WSL 2，还需启用 **Hyper-V** 功能：
     ```powershell
     dism.exe /online /enable-feature /featurename:Microsoft-Hyper-V-All /all /norestart
     ```
-4. 系统会提示你重启电脑，重启后继续操作。
+4. 重启电脑。
 
 #### 2. 安装 WSL
 1. 在 **PowerShell** 中输入以下命令并回车：
@@ -49,7 +49,7 @@
     ```
 
 #### 7. 更改 WSL 版本（可选）
-1. 默认情况下，WSL 安装的是 WSL 2。如果你需要切换到 WSL 1，输入以下命令：
+1. 默认情况下，WSL 安装的是 WSL 2。如果需要切换到 WSL 1，输入以下命令：
     ```powershell
     wsl --set-version <发行版名称> 1
     ```
@@ -66,17 +66,18 @@
     ```powershell
     wsl --help
     ```
-以上，就已经能安装一个**够用**的WSL 2，参考[WSL 文档](https://learn.microsoft.com/zh-cn/windows/wsl/)还可以尝试运行GUI应用或者使用CUDA。
+
+以上步骤即可安装一个**够用**的WSL 2，参考[WSL 文档](https://learn.microsoft.com/zh-cn/windows/wsl/)还可以尝试运行GUI应用或使用CUDA。
 
 以下是我使用WSL的一些截图：
 ![系统内核](./assets/screenfetch.png)
-以上是系统内核。
+*系统内核*
 
 ![Nautilus文件管理](./assets/nautilus.png)
-这是Nautilus，一个GUI文件管理器。
+*Nautilus文件管理器*
 
 ![Code](./assets/vscode.png)
-还可以很轻松地连接到VS Code。
+*连接到VS Code*
 
 ![CUDA](./assets/cuda.png)
-检查Nvidia GPU驱动。
+*检查Nvidia GPU驱动*
